@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Draconis Robotics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    /* Your existing styles here... */
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+    }
+
+    .creator-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .track-system {
+      background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+    }
+
+    .track-academic {
+      background-color: #93c5fd;
+    }
+
+    .track-competition {
+      background-color: #86efac;
+    }
+
+    .vex-v5 {
+      background-color: #fca5a5;
+    }
+
+    .vex-iq {
+      background-color: #a5b4fc;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .team-card {
+      transition: all 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Mobile submenu caret rotate */
+    .submenu-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow">
+    <div class="w-full max-w-screen-xl mx-auto px-4">
+      <div
+        class="flex justify-between h-16 items-center"
+      >
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="/" aria-label="Home">
+            <img
+              class="h-8 w-auto"
+              src="insert-logo-link-here"
+              alt="Draconis Robotics Logo"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div
+          class="hidden md:flex items-center space-x-8 text-sm font-medium"
+        >
+          <!-- About Us -->
+          <div class="relative group">
+            <button
+              class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600"
+            >
+              <span>About Us</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 7l5 5 5-5H5z" />
+              </svg>
+            </button>
+            <div
+              class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-48 z-10"
+            >
+              <a
+                href="/about/overview"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Overview</a
+              >
+              <a
+                href="/about/our-story"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Our Story / History</a
+              >
+              <a
+                href="/about/our-team"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Our Team</a
+              >
+              <a
+                href="/about/achievements"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Achievements</a
+              >
+              <a
+                href="/about/partners"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Partners</a
+              >
+              <a
+                href="/about/testimonials"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Testimonials</a
+              >
+            </div>
+          </div>
+
+          <!-- Academy -->
+          <div class="relative group">
+            <button
+              class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600"
+            >
+              <span>Academy</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 7l5 5 5-5H5z" />
+              </svg>
+            </button>
+            <div
+              class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-56 z-10"
+            >
+              <a
+                href="/academy/vex-iq"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >VEX IQ</a
+              >
+              <a
+                href="/academy/vex-v5"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >VEX V5</a
+              >
+              <a
+                href="/academy/workshops-camps"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Workshops & Camps</a
+              >
+              <a
+                href="/academy/sponsorship-program"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Sponsorship Program</a
+              >
+            </div>
+          </div>
+
+          <!-- Competition -->
+          <div class="relative group">
+            <button
+              class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600"
+            >
+              <span>Competition</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 7l5 5 5-5H5z" />
+              </svg>
+            </button>
+            <div
+              class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-48 z-10"
+            >
+              <a
+                href="/competition/viqrc"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >VEX IQ Competitions</a
+              >
+              <a
+                href="/competition/v5rc"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >VEX V5 Competitions</a
+              >
+            </div>
+          </div>
+
+          <!-- News -->
+          <a href="/news" class="text-gray-700 hover:text-purple-600">News</a>
+
+          <!-- Talents -->
+          <a href="/talents" class="text-gray-700 hover:text-purple-600">Talents</a>
+
+          <!-- Shop -->
+          <a href="/shop" class="text-gray-700 hover:text-purple-600">Shop</a>
+
+          <!-- Work With Us -->
+          <div class="relative group">
+            <button
+              class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600"
+            >
+              <span>Work With Us</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 7l5 5 5-5H5z" />
+              </svg>
+            </button>
+            <div
+              class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-56 z-10"
+            >
+              <a
+                href="/work-with-us/auditions"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Auditions</a
+              >
+              <a
+                href="/work-with-us/join-the-team"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Join the Team</a
+              >
+              <a
+                href="/work-with-us/outreach-program"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Outreach Program</a
+              >
+            </div>
+          </div>
+
+          <!-- FAQ -->
+          <div class="relative group">
+            <button
+              class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600"
+            >
+              <span>FAQ</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 7l5 5 5-5H5z" />
+              </svg>
+            </button>
+            <div
+              class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-64 z-10"
+            >
+              <a
+                href="/faq/draconis-talents"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Draconis Talents FAQ</a
+              >
+              <a
+                href="/faq/draconis-robotics"
+                class="block px-4 py-2 text-gray-700 hover:bg-purple-100"
+                >Draconis Robotics FAQ</a
+              >
+            </div>
+          </div>
+
+          <!-- Contact Us -->
+          <a href="/contact-us" class="text-gray-700 hover:text-purple-600"
+            >Contact Us</a
+          >
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button
+          id="menuButton"
+          class="md:hidden text-gray-700 hover:text-purple-600 focus:outline-none"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobileMenu"
+    class="md:hidden bg-white shadow-md px-4 py-4 space-y-2 hidden"
+  >
+    <!-- Mobile menu items with submenus -->
+    <div>
+      <button
+        class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle"
+        aria-expanded="false"
+        aria-controls="mobileAboutSubmenu"
+      >
+        <span>About Us</span>
+        <svg
+          class="w-4 h-4 transition-transform duration-200"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div
+        id="mobileAboutSubmenu"
+        class="pl-4 mt-2 space-y-1 hidden"
+      >
+        <a
+          href="/about/overview"
+          class="block text-gray-700 hover:text-purple-600"
+          >Overview</a
+        >
+        <a
+          href="/about/our-story"
+          class="block text-gray-700 hover:text-purple-600"
+          >Our Story / History</a
+        >
+        <a
+          href="/about/our-team"
+          class="block text-gray-700 hover:text-purple-600"
+          >Our Team</a
+        >
+        <a
+          href="/about/achievements"
+          class="block text-gray-700 hover:text-purple-600"
+          >Achievements</a
+        >
+        <a
+          href="/about/partners"
+          class="block text-gray-700 hover:text-purple-600"
+          >Partners</a
+        >
+        <a
+          href="/about/testimonials"
+          class="block text-gray-700 hover:text-purple-600"
+          >Testimonials</a
+        >
+      </div>
+    </div>
+
+    <div>
+      <button
+        class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle"
+        aria-expanded="false"
+        aria-controls="mobileAcademySubmenu"
+      >
+        <span>Academy</span>
+        <svg
+          class="w-4 h-4 transition-transform duration-200"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div
+        id="mobileAcademySubmenu"
+        class="pl-4 mt-2 space-y-1 hidden"
+      >
+        <a
+          href="/academy/vex-iq"
+          class="block text-gray-700 hover:text-purple-600"
+          >VEX IQ</a
+        >
+        <a
+          href="/academy/vex-v5"
+          class="block text-gray-700 hover:text-purple-600"
+          >VEX V5</a
+        >
+        <a
+          href="/academy/workshops-camps"
+          class="block text-gray-700 hover:text-purple-600"
+          >Workshops & Camps</a
+        >
+        <a
+          href="/academy/sponsorship-program"
+          class="block text-gray-700 hover:text-purple-600"
+          >Sponsorship Program</a
+        >
+      </div>
+    </div>
+
+    <div>
+      <button
+        class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle"
+        aria-expanded="false"
+        aria-controls="mobileCompetitionSubmenu"
+      >
+        <span>Competition</span>
+        <svg
+          class="w-4 h-4 transition-transform duration-200"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div
+        id="mobileCompetitionSubmenu"
+        class="pl-4 mt-2 space-y-1 hidden"
+      >
+        <a
+          href="/competition/viqrc"
+          class="block text-gray-700 hover:text-purple-600"
+          >VEX IQ Competitions</a
+        >
+        <a
+          href="/competition/v5rc"
+          class="block text-gray-700 hover:text-purple-600"
+          >VEX V5 Competitions</a
+        >
+      </div>
+    </div>
+
+    <a href="/news" class="block text-gray-700 hover:text-purple-600">News</a>
+    <a href="/talents" class="block text-gray-700 hover:text-purple-600">Talents</a>
+    <a href="/shop" class="block text-gray-700 hover:text-purple-600">Shop</a>
+
+    <div>
+      <button
+        class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle"
+        aria-expanded="false"
+        aria-controls="mobileWorkSubmenu"
+      >
+        <span>Work With Us</span>
+        <svg
+          class="w-4 h-4 transition-transform duration-200"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div
+        id="mobileWorkSubmenu"
+        class="pl-4 mt-2 space-y-1 hidden"
+      >
+        <a
+          href="/work-with-us/auditions"
+          class="block text-gray-700 hover:text-purple-600"
+          >Auditions</a
+        >
+        <a
+          href="/work-with-us/join-the-team"
+          class="block text-gray-700 hover:text-purple-600"
+          >Join the Team</a
+        >
+        <a
+          href="/work-with-us/outreach-program"
+          class="block text-gray-700 hover:text-purple-600"
+          >Outreach Program</a
+        >
+      </div>
+    </div>
+
+    <div>
+      <button
+        class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle"
+        aria-expanded="false"
+        aria-controls="mobileFAQSubmenu"
+      >
+        <span>FAQ</span>
+        <svg
+          class="w-4 h-4 transition-transform duration-200"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div
+        id="mobileFAQSubmenu"
+        class="pl-4 mt-2 space-y-1 hidden"
+      >
+        <a
+          href="/faq/draconis-talents"
+          class="block text-gray-700 hover:text-purple-600"
+          >Draconis Talents FAQ</a
+        >
+        <a
+          href="/faq/draconis-robotics"
+          class="block text-gray-700 hover:text-purple-600"
+          >Draconis Robotics FAQ</a
+        >
+      </div>
+    </div>
+
+    <a href="/contact-us" class="block text-gray-700 hover:text-purple-600"
+      >Contact Us</a
+    >
+  </div>
+
+  <script>
+    // Toggle mobile menu open/close
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+      const expanded = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", !expanded);
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Toggle submenus on mobile
+    const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+    submenuToggles.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", !expanded);
+        const submenuId = btn.getAttribute("aria-controls");
+        const submenu = document.getElementById(submenuId);
+        submenu.classList.toggle("hidden");
+      });
+    });
+  </script>
+</body>
+
+</html>
+
+
+<body class="font-sans antialiased text-gray-800 overflow-x-hidden">
+    <div class="w-full max-w-screen-xl mx-auto px-4">
+
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-16 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold">VEX V5 Robotics Competition (V5RC)</h1>
+            <p class="mt-4 text-xl max-w-2xl mx-auto">
+                The official VEX Robotics Competition for middle school and high school students.
+            </p>
+        </section>
+
+        <!-- About V5RC -->
+        <section class="py-12 bg-white text-center">
+            <h2 class="text-3xl font-bold text-gray-900">About the VEX V5 Robotics Competition</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                The VEX V5 Robotics Competition (V5RC) is the world's largest and most prestigious robotics competition for middle and high school students.
+                Students design, build, and program robots to compete in dynamic games that change every season.
+                At Draconis Robotics, we provide continuous training, scrimmages, and mentorship to prepare our students for success.
+            </p>
+        </section>
+
+        <!-- Program Highlights -->
+        <section class="py-12 bg-gray-50">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-white shadow-md rounded-lg">
+                    <i class="fas fa-tools text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Engineering Skills</h3>
+                    <p class="text-gray-600 text-sm">Hands-on building with advanced mechanical design, electronics, and CAD modeling.</p>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-lg">
+                    <i class="fas fa-code text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Programming & Automation</h3>
+                    <p class="text-gray-600 text-sm">Learn to program autonomous and driver-controlled systems using VEXcode.</p>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-lg">
+                    <i class="fas fa-chess-knight text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Strategic Gameplay</h3>
+                    <p class="text-gray-600 text-sm">Develop strategies, work in alliances, and compete in team-based challenges.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Season Game Video -->
+        <section class="py-12 bg-white text-center">
+            <h2 class="text-3xl font-bold text-gray-900">Current Season's Game</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Watch the official game reveal for this season's VEX V5RC challenge.
+            </p>
+            <div class="mt-8 flex justify-center">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/ocmONiVun9M?si=Kywdfu9ON3zUFZYn" title="VEX V5RC Game Reveal" frameborder="0" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+            </div>
+        </section>
+
+        <!-- Requirements -->
+        <section class="py-12 bg-gray-50 text-center">
+            <h2 class="text-3xl font-bold text-gray-900">Participant Requirements</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                To participate in V5RC with Draconis Robotics, students must meet the following criteria:
+            </p>
+            <ul class="mt-8 max-w-xl mx-auto text-left space-y-4 text-gray-700">
+                <li><i class="fas fa-check-circle text-purple-600 mr-2"></i> Be in middle school or high school (ages 11-18)</li>
+                <li><i class="fas fa-check-circle text-purple-600 mr-2"></i> Have prior robotics experience OR be enrolled in our classes for at least 1 month</li>
+                <li><i class="fas fa-check-circle text-purple-600 mr-2"></i> Pass a technical assessment test</li>
+                <li><i class="fas fa-check-circle text-purple-600 mr-2"></i> Complete an interview with our coaching team</li>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Final CTA -->
+        <section class="py-12 bg-purple-700 text-white text-center">
+            <h2 class="text-3xl font-bold">Interested in Joining V5RC?</h2>
+            <p class="mt-4 text-lg max-w-xl mx-auto">
+                Get in touch with Draconis Robotics to learn how you can participate in the next season.
+            </p>
+            <div class="mt-8">
+                <a href="/contact-us" class="bg-white text-purple-700 px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition">
+                    Contact Us
+                </a>
+            </div>
+        <div>
+        </div>
+        </ul>
+        </section>
+</body>
+
+<footer class="bg-gray-800 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About -->
+            <div>
+                <h3 class="text-white text-lg font-semibold mb-4">About Draconis</h3>
+                <p class="text-gray-400 text-sm">
+                    Draconis Robotics empowers students through STEM education, robotics competitions, and digital talents.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
+                    <li><a href="/about/overview" class="hover:text-purple-400">About Us</a></li>
+                    <li><a href="/about/achievements" class="hover:text-purple-400">achievements</a></li>
+                    <li><a href="/news" class="hover:text-purple-400">news</a></li>
+                    <li><a href="/talents" class="hover:text-purple-400">Talents</a></li>
+                    <li><a href="/shop" class="hover:text-purple-400">Shop</a></li>
+                    <li><a href="/work-with-us" class="hover:text-purple-400">Work With Us</a></li>
+                    <li><a href="/faq" class="hover:text-purple-400">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
+                <address class="not-italic text-sm space-y-2">
+                    <p>NIL<br>NIL</p>
+                    <p>Email: <a href="mailto:contact@Draconisrobotics.com" class="hover:text-purple-400">contact@Draconisrobotics.com</a></p>
+                    <p>Phone: <a href="tel:NIL" class="hover:text-purple-400">NIL</a></p>
+                </address>
+            </div>
+
+<!-- Social Media -->
+<div>
+    <h3 class="text-white text-lg font-semibold mb-4">Follow Us</h3>
+    <div class="flex space-x-5">
+        <a href="https://www.twitch.tv/draconisrobotics" aria-label="Twitch" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitch fa-lg"></i>
+        </a>
+        <a href="https://x.com/DRGN_Robo" aria-label="Twitter / X" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter fa-lg"></i>
+        </a>
+        <a href="https://www.instagram.com/draconis_robotics/" aria-label="Instagram" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/draconis-robotics" aria-label="LinkedIn" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in fa-lg"></i>
+        </a>
+        <a href="https://www.youtube.com/@DraconisRobotics" aria-label="YouTube" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube fa-lg"></i>
+        </a>
+    </div>
+</div>
+
+<div class="mt-12 border-t border-gray-700 pt-6 text-xs text-gray-500 flex justify-center items-center">
+  &copy; 2025 Draconis Robotics. All rights reserved.
+</div>
+
+    </div>
+    
+</footer>
+
+</html>

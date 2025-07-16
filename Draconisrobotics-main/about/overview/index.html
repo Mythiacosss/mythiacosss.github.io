@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draconis Robotics | talents </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+        }
+
+        .creator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .track-system {
+            background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+        }
+
+        .track-academic {
+            background-color: #93c5fd;
+        }
+
+        .track-competition {
+            background-color: #86efac;
+        }
+
+        .vex-v5 {
+            background-color: #fca5a5;
+        }
+
+        .vex-iq {
+            background-color: #a5b4fc;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .team-card {
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800">
+
+    <!-- Navigation -->
+
+    <nav class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" aria-label="Home">
+                        <img class="h-8 w-auto" src="insert logo link here" alt="Draconis Robotics Logo" />
+                    </a>
+                </div>
+
+
+<!-- Menu -->
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+  <!-- About Us -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>About Us</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-48 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\overview.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Overview</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\our-story.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Our Story / History</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\our-team.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Our Team</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\achievements.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Achievements</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\partners.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Partners</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Testimonials</a>
+    </div>
+  </div>
+
+  <!-- Academy -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>Academy</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-56 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\academy\vex-iq.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX IQ</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\academy\vex-v5.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX V5</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\academy\workshops-camps.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Workshops & Camps</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\academy\sponsorship-program.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Sponsorship Program</a>
+    </div>
+  </div>
+
+  <!-- Competition -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>Competition</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-48 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\competition\VIQRC.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX IQ Competitions</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\competition\V5RC.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX V5 Competitions</a>
+    </div>
+  </div>
+
+  <!-- Talents -->
+  <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\talents\talents.html" class="text-gray-700 hover:text-purple-600">Talents</a>
+
+  <!-- Shop -->
+  <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\shop.html" class="text-gray-700 hover:text-purple-600">Shop</a>
+
+  <!-- Work With Us -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>Work With Us</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-56 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\work-with-us\auditions.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Auditions</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\work-with-us\join-the-team.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Join the Team</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\work-with-us\outreach-program.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Outreach Program</a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>FAQ</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-64 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\faq\draconis-talents-FAQ.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Draconis Talents FAQ</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\faq\draconis-robotics-FAQ.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Draconis Robotics FAQ</a>
+    </div>
+  </div>
+
+  <!-- Contact Us -->
+  <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\contact-us.html" class="text-gray-700 hover:text-purple-600">Contact Us</a>
+</div>
+
+    </nav>
+
+  <div class="container mx-auto px-4 mt-8">
+    <section id="company-overview" class="mb-12">
+      <h1 class="text-3xl font-bold mb-4">Company Overview</h1>
+      <p>
+        <strong>Draconis Robotics (DRGN)</strong> is a specialist robotics
+        academy and team focused exclusively on
+        <strong>VEX Robotics Competition (VRC)</strong>. Founded by former VRC
+        competitors and robotics enthusiasts, DRGN combines competitive
+        experience with dedicated training to help students and teams excel in
+        VEX Robotics.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Our Vision</h2>
+      <p>
+        To be the premier VEX Robotics training academy that nurtures
+        competitive excellence and inspires innovation through hands-on
+        learning — <strong>accessible to all</strong>.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Our Mission</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>
+          Provide expert coaching and training rooted in firsthand VEX Robotics
+          Competition experience.
+        </li>
+        <li>
+          Develop well-rounded competitors by emphasizing strategy, engineering
+          design, coding, and teamwork.
+        </li>
+        <li>
+          Foster a supportive community of passionate robotics students aiming
+          for competitive success.
+        </li>
+        <li>
+          Empower students to reach their full potential through structured
+          learning and real-world robotics challenges.
+        </li>
+        <li>
+          <strong>Keep training affordable</strong> — because STEM skills will be
+          essential for 75% of future jobs, and
+          <strong>no child should be denied the joy of learning due to cost</strong>.
+        </li>
+        <li>
+          Offer <strong>sponsorships and financial aid</strong> for students who
+          cannot afford fees, ensuring equal opportunities for all.
+        </li>
+        <li>
+          Conduct <strong>outreach sessions</strong> to introduce robotics and
+          STEM education to underrepresented and underserved communities.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Key Offerings</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>
+          <strong>VEX Robotics Training & Coaching:</strong> Comprehensive
+          courses and mentorship from former VRC players, covering robot
+          design, programming, and competition strategy.
+        </li>
+        <li>
+          <strong>Competitive Team Development:</strong> Form and support
+          competitive VEX teams for local, regional, and international
+          competitions.
+        </li>
+        <li>
+          <strong>Workshops & Outreach:</strong> Regular clinics, bootcamps,
+          and outreach sessions designed to sharpen skills, raise STEM
+          awareness, and prepare teams for competition season.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Our Edge</h2>
+      <p>
+        With deep roots in the VRC community and hands-on competition
+        experience, DRGN brings insider knowledge and proven techniques that
+        help teams perform at their best — while ensuring training remains
+        <strong>the most affordable in the market</strong>.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Facilities</h2>
+      <p>
+        Currently operating from a <strong>1100 sqft</strong> dedicated space,
+        our facility includes training rooms, a streaming studio, and areas
+        equipped for robot building and testing — designed to support a focused
+        competitive environment. We plan to <strong>expand soon</strong> to
+        better serve our growing community.
+      </p>
+    </section>
+
+    <section id="ceo-message" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-2">A Message from the CEO</h2>
+      <p>
+        In this day and age, many kids grow up sitting in classrooms, listening
+        to teachers talk — but often they miss out on practical skills that
+        truly prepare them for the future. For many, studying feels like a
+        chore because the joy and fun have been stripped away from learning.
+        Sadly, creativity is being stripped away too, as rigid curriculums
+        leave little room for imagination and hands-on exploration.
+      </p>
+      <p>
+        At Draconis Robotics, we believe education should be hands-on,
+        engaging, and inspiring. Beyond teaching STEM skills, which are
+        essential for tomorrow’s jobs, we are committed to building
+        perseverance, resilience, and character. Robotics isn’t just about
+        robots — it’s about developing problem solvers who don’t give up when
+        faced with challenges, and creators who dare to imagine new
+        possibilities.
+      </p>
+      <p>
+        We want to nurture more than just engineers; we want to help shape
+        confident, creative individuals ready to take on the world.
+      </p>
+      <p><em>— Mythiacosss, CEO, Draconis Robotics</em></p>
+    </section>
+  </div>
+
+  <!-- New detailed footer starts here -->
+  <footer class="bg-gray-800 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">About Draconis</h3>
+          <p class="text-gray-400 text-sm">
+            Draconis Robotics empowers students through STEM education, robotics competitions, and digital talents.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
+            <li><a href="about/overview.html" class="hover:text-purple-400">About Us</a></li>
+            <li><a href="academy/index.html" class="hover:text-purple-400">Academy</a></li>
+            <li><a href="competition/index.html" class="hover:text-purple-400">Competition</a></li>
+            <li><a href="talents.html" class="hover:text-purple-400">Talents</a></li>
+            <li><a href="shop.html" class="hover:text-purple-400">Shop</a></li>
+            <li><a href="work-with-us/index.html" class="hover:text-purple-400">Work With Us</a></li>
+            <li><a href="faq/index.html" class="hover:text-purple-400">FAQ</a></li>
+            <li><a href="contact-us.html" class="hover:text-purple-400">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
+          <address class="not-italic text-sm space-y-2">
+            <p>123 Robotics Lane<br />Singapore 123456</p>
+            <p>
+              Email:
+              <a href="mailto:Draconisrobotics@gmail.com" class="hover:text-purple-400"
+                >Draconisrobotics@gmail.com</a
+              >
+            </p>
+            <p>
+              Phone:
+              <a href="tel:+6561234567" class="hover:text-purple-400">+65 6123 4567</a>
+            </p>
+          </address>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-5">
+            <a
+              href="https://www.twitch.tv/draconisrobotics"
+              aria-label="Twitch"
+              class="hover:text-purple-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitch fa-lg"></i>
+            </a>
+            <a
+              href="https://x.com/DRGN_Robo"
+              aria-label="Twitter / X"
+              class="hover:text-purple-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/draconis_robotics/"
+              aria-label="Instagram"
+              class="hover:text-purple-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/draconis-robotics"
+              aria-label="LinkedIn"
+              class="hover:text-purple-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin-in fa-lg"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@DraconisRobotics"
+              aria-label="YouTube"
+              class="hover:text-purple-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-youtube fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-12 border-t border-gray-700 pt-6 text-xs text-gray-500 flex justify-center items-center"
+      >
+        &copy; 2025 Draconis Robotics. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

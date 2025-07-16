@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Draconis Robotics | VEX IQ Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+        }
+
+        .creator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .track-system {
+            background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+        }
+
+        .track-academic {
+            background-color: #93c5fd;
+        }
+
+        .track-competition {
+            background-color: #86efac;
+        }
+
+        .vex-v5 {
+            background-color: #fca5a5;
+        }
+
+        .vex-iq {
+            background-color: #a5b4fc;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .team-card {
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800">
+
+    <!-- Navigation -->
+
+    <nav class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" aria-label="Home">
+                        <img class="h-8 w-auto" src="insert logo link here" alt="Draconis Robotics Logo" />
+                    </a>
+                </div>
+
+
+<!-- Menu -->
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+  <!-- About Us -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>About Us</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-48 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\overview.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Overview</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\our-story.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Our Story / History</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\our-team.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Our Team</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\achievements.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Achievements</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\partners.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Partners</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\about\testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Testimonials</a>
+    </div>
+  </div>
+
+  <!-- Academy -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>Academy</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-56 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\academy\vex-iq.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX IQ</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\academy\vex-v5.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX V5</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\academy\workshops-camps.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Workshops & Camps</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\academy\sponsorship-program.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Sponsorship Program</a>
+    </div>
+  </div>
+
+  <!-- Competition -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>Competition</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-48 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\competition\VIQRC.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX IQ Competitions</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\competition\V5RC.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX V5 Competitions</a>
+    </div>
+  </div>
+
+  <!-- Talents -->
+  <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\talents\talents.html" class="text-gray-700 hover:text-purple-600">Talents</a>
+
+  <!-- Shop -->
+  <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\shop.html" class="text-gray-700 hover:text-purple-600">Shop</a>
+
+  <!-- Work With Us -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>Work With Us</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-56 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\work-with-us\auditions.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Auditions</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\work-with-us\join-the-team.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Join the Team</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\work-with-us\outreach-program.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Outreach Program</a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="relative group">
+    <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+      <span>FAQ</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M5 7l5 5 5-5H5z" />
+      </svg>
+    </button>
+    <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-64 z-10">
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\faq\draconis-talents-FAQ.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Draconis Talents FAQ</a>
+      <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\faq\draconis-robotics-FAQ.html" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Draconis Robotics FAQ</a>
+    </div>
+  </div>
+
+  <!-- Contact Us -->
+  <a href="C:\Users\Johna\OneDrive\Desktop\DRGN Website\contact-us.html" class="text-gray-700 hover:text-purple-600">Contact Us</a>
+</div>
+
+    </nav>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <header class="bg-white shadow p-6">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-4xl font-bold text-blue-900 mb-2">VEX IQ Academy</h1>
+      <p class="text-gray-600 text-lg max-w-3xl">
+        VEX IQ is an engaging, easy-to-learn robotics platform designed for students aged 7 to 12,
+        introducing foundational STEM skills through hands-on building and coding.
+      </p>
+      <p class="mt-1 text-gray-600">
+        Our academy guides learners from beginner to mastery through structured curriculum levels.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6">
+
+    <!-- Curriculum Levels -->
+    <section class="mt-10 bg-white rounded-lg shadow p-6">
+      <h2 class="text-2xl font-semibold mb-4">Curriculum Levels</h2>
+      <p class="mb-4">Structured learning path to build skills progressively:</p>
+      <ul class="list-disc list-inside space-y-3 text-gray-700">
+        <li><strong>Level 1 - Foundations:</strong> Basic robotics concepts, simple builds, and introductory programming logic.</li>
+        <li><strong>Level 2 - Intermediate:</strong> Sensor integration, advanced builds, and autonomous programming.</li>
+        <li><strong>Level 3 - Advanced:</strong> Complex robot designs, strategic real worlds problem-solving, and advanced programming concepts.</li>
+        <li><strong>Level 4 - Mastery:</strong> Competition preparation, custom designs, and teamwork skills.</li>
+      </ul>
+    </section>
+
+    <!-- Class Schedule -->
+    <section class="mt-10 bg-white rounded-lg shadow p-6">
+      <h2 class="text-2xl font-semibold mb-4">Class Schedule</h2>
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Level</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Days</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">Level 1 - Foundations</td>
+            <td class="px-6 py-4 whitespace-nowrap">Mon & Wed</td>
+            <td class="px-6 py-4 whitespace-nowrap">4:00 PM - 5:30 PM</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span
+                class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Open</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">Level 2 - Intermediate</td>
+            <td class="px-6 py-4 whitespace-nowrap">Tue & Thu</td>
+            <td class="px-6 py-4 whitespace-nowrap">4:00 PM - 5:30 PM</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span
+                class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Open</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">Level 3 - Advanced</td>
+            <td class="px-6 py-4 whitespace-nowrap">Fri</td>
+            <td class="px-6 py-4 whitespace-nowrap">4:00 PM - 5:30 PM</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span
+                class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">Waitlist</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">Level 4 - Mastery</td>
+            <td class="px-6 py-4 whitespace-nowrap">Sat</td>
+            <td class="px-6 py-4 whitespace-nowrap">10:00 AM - 12:00 PM</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span
+                class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">Full</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Enrollment Info -->
+    <section class="mt-10 bg-white rounded-lg shadow p-6">
+      <h2 class="text-2xl font-semibold mb-4">📝 Enrollment Information</h2>
+      <p class="mb-4">Ready to join? Our enrollment process is simple and personalized:</p>
+      <ul class="list-disc list-inside text-gray-700 mb-4">
+        <li>Contact us to book an appointment for enrollment</li>
+        <li>Visit our center for a consultation and registration</li>
+        <li>Complete payment in person during your appointment</li>
+        <li>Receive confirmation and class details from our staff</li>
+      </ul>
+      <p>Have questions? <a href="/contact-us.html" class="text-purple-600 hover:underline font-semibold">Contact us</a> anytime!</p>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
