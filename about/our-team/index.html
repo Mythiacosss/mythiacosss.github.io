@@ -26,8 +26,6 @@
 </head>
 
 <body class="font-sans antialiased text-gray-800">
-
-<body class="font-sans antialiased text-gray-800">
   <!-- Navigation -->
   <nav class="bg-white shadow">
     <div class="w-full max-w-screen-xl mx-auto px-4">
@@ -575,74 +573,27 @@
         </span>
       </div>
     </div>
+    </section>
   
-    
+    <!-- Teaching Staff -->
+<section id="teaching" class="team-section hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl w-full">
+  <div class="team-card bg-gray-50 rounded-lg shadow-md overflow-hidden p-6" data-category="vexv5">
+    <div class="flex items-center">
+      <div class="flex-shrink-0">
+        <img class="h-16 w-16 rounded-full" src="https://via.placeholder.com/80" alt="Teaching Staff 1" />
+      </div>
+      <div class="ml-4">
+        <h4 class="text-lg font-medium text-gray-900">Alex</h4>
+        <p class="text-sm text-purple-600">VEX V5 Instructor</p>
+      </div>
+    </div>
+    <div class="mt-4">
+      <p class="text-sm text-gray-600">Experienced in teaching robotics and coding fundamentals.</p>
+    </div>
+  </div>
+  <!-- Add more teaching staff cards as needed -->
+</section>
 
-    <!-- Add more coaching cards here with correct data-category (viqrc or v5rc) 
-    <div class="team-card bg-gray-50 rounded-lg shadow-md overflow-hidden p-6" data-category="v5rc">
-      <div class="flex items-center">
-        <div class="flex-shrink-0">
-          <img class="h-16 w-16 rounded-full" src="https://via.placeholder.com/80" alt="Coach 2" />
-        </div>
-        <div class="ml-4">
-          <h4 class="text-lg font-medium text-gray-900">Taylor Johnson</h4>
-          <p class="text-sm text-purple-600">V5RC Coach</p>
-          <p class="mt-1 text-sm text-gray-500">5 years coaching</p>
-        </div>
-      </div>
-      <div class="mt-4">
-        <p class="text-sm text-gray-600">
-          Specializes in driver skills and match strategy for V5 competitions.
-        </p>
-      </div>
-      <div class="mt-4 flex flex-wrap gap-2">
-        <span
-          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
-        >
-          <i class="fas fa-trophy mr-1"></i> 5 Trophies
-        </span>
-      </div>
-    </div>
-  </section>-->
-
-  <!-- Teaching Staff 
-  <section id="teaching" class="team-section hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full">
-     Example Teaching Card 
-    <div class="team-card bg-white rounded-lg shadow-md overflow-hidden p-6" data-category="vexv5">
-      <div class="flex items-center">
-        <div class="flex-shrink-0">
-          <img class="h-16 w-16 rounded-full" src="https://via.placeholder.com/80" alt="Teacher 1" />
-        </div>
-        <div class="ml-4">
-          <h4 class="text-lg font-medium text-gray-900">Jordan Kim</h4>
-          <p class="text-sm text-purple-600">VEX V5 Instructor</p>
-          <p class="mt-1 text-sm text-gray-500">4 years teaching experience</p>
-        </div>
-      </div>
-      <div class="mt-4">
-        <p class="text-sm text-gray-600">
-          Experienced in programming and robot design for VEX V5 teams.
-        </p>
-      </div>
-    </div>
-    <div class="team-card bg-white rounded-lg shadow-md overflow-hidden p-6" data-category="vexiq">
-      <div class="flex items-center">
-        <div class="flex-shrink-0">
-          <img class="h-16 w-16 rounded-full" src="https://via.placeholder.com/80" alt="Teacher 2" />
-        </div>
-        <div class="ml-4">
-          <h4 class="text-lg font-medium text-gray-900">Casey Nguyen</h4>
-          <p class="text-sm text-purple-600">VEX IQ Instructor</p>
-          <p class="mt-1 text-sm text-gray-500">3 years teaching experience</p>
-        </div>
-      </div>
-      <div class="mt-4">
-        <p class="text-sm text-gray-600">
-          Specializes in beginner robotics education and fundamentals.
-        </p>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Creators Team -->
   <section id="creators" class="team-section hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl w-full">
@@ -722,6 +673,7 @@
       });
     });
 
+ 
     // Filtering Teaching Staff
     const teachingCards = document.querySelectorAll('#teaching .team-card');
     const teachingFilterButtons = filtersTeaching.querySelectorAll('.filter-btn');
@@ -750,8 +702,7 @@
     setActiveTab('founders');
   </script>
 
-</body>
-</html>
+
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400">
@@ -820,6 +771,6 @@
         </div>
       </div>
     </footer>
-
-  </body>
+    
+</body>
 </html>
