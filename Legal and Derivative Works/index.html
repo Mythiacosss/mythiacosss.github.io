@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Draconis Talents Legal and Derivative Works Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* Your existing styles here... */
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+        }
+
+        .creator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .track-system {
+            background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+        }
+
+        .track-academic {
+            background-color: #93c5fd;
+        }
+
+        .track-competition {
+            background-color: #86efac;
+        }
+
+        .vex-v5 {
+            background-color: #fca5a5;
+        }
+
+        .vex-iq {
+            background-color: #a5b4fc;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .team-card {
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile submenu caret rotate */
+        .submenu-toggle[aria-expanded="true"] svg {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow">
+        <div class="w-full max-w-screen-xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" aria-label="Home">
+                        <img class="h-8 w-auto" src="insert-logo-link-here" alt="Draconis Robotics Logo" />
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <!-- About Us -->
+                    <div class="relative group">
+                        <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+                            <span>About Us</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 7l5 5 5-5H5z" />
+                            </svg>
+                        </button>
+                        <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-48 z-10">
+                            <a href="/about/overview" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Overview</a>
+                            <a href="/about/our-story" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Our Story / History</a>
+                            <a href="/about/our-team" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Our Team</a>
+                            <a href="/about/achievements" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Achievements</a>
+                            <a href="/about/partners" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Partners</a>
+                            <a href="/about/testimonials" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Testimonials</a>
+                        </div>
+                    </div>
+
+                    <!-- Academy -->
+                    <div class="relative group">
+                        <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+                            <span>Academy</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 7l5 5 5-5H5z" />
+                            </svg>
+                        </button>
+                        <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-56 z-10">
+                            <a href="/academy/vex-iq" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX IQ</a>
+                            <a href="/academy/vex-v5" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX V5</a>
+                            <a href="/academy/workshops-camps" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Workshops & Camps</a>
+                            <a href="/academy/sponsorship-program" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Sponsorship Program</a>
+                        </div>
+                    </div>
+
+                    <!-- Competition -->
+                    <div class="relative group">
+                        <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+                            <span>Competition</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 7l5 5 5-5H5z" />
+                            </svg>
+                        </button>
+                        <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-48 z-10">
+                            <a href="/competition/viqrc" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX IQ Competitions</a>
+                            <a href="/competition/v5rc" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">VEX V5 Competitions</a>
+                        </div>
+                    </div>
+
+                    <!-- News -->
+                    <a href="/news" class="text-gray-700 hover:text-purple-600">News</a>
+
+                    <!-- Talents -->
+                    <a href="/talents" class="text-gray-700 hover:text-purple-600">Talents</a>
+
+                    <!-- Shop -->
+                    <a href="https://draconisrobotics.myshopify.com" class="text-gray-700 hover:text-purple-600">Shop</a>
+
+                    <!-- Work With Us -->
+                    <div class="relative group">
+                        <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+                            <span>Work With Us</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 7l5 5 5-5H5z" />
+                            </svg>
+                        </button>
+                        <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-56 z-10">
+                            <a href="/work-with-us/auditions" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Auditions</a>
+                            <a href="/work-with-us/join-the-team" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Join the Team</a>
+                            <a href="/work-with-us/outreach-program" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Outreach Program</a>
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="relative group">
+                        <button class="inline-flex items-center space-x-1 text-gray-700 hover:text-purple-600">
+                            <span>FAQ</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 7l5 5 5-5H5z" />
+                            </svg>
+                        </button>
+                        <div class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-300 group-hover:delay-0 bg-white shadow-md rounded-md mt-2 py-2 w-64 z-10">
+                            <a href="/faq/draconis-robotics" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Draconis Robotics FAQ</a>
+                            <a href="/faq/draconis-talents" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Draconis Talents FAQ</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Us -->
+                    <a href="/contact-us" class="text-gray-700 hover:text-purple-600">Contact Us</a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="menuButton" class="md:hidden text-gray-700 hover:text-purple-600 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden bg-white shadow-md px-4 py-4 space-y-2 hidden">
+        <!-- Mobile menu items with submenus -->
+        <div>
+            <button class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle" aria-expanded="false" aria-controls="mobileAboutSubmenu">
+                <span>About Us</span>
+                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="mobileAboutSubmenu" class="pl-4 mt-2 space-y-1 hidden">
+                <a href="/about/overview" class="block text-gray-700 hover:text-purple-600">Overview</a>
+                <a href="/about/our-story" class="block text-gray-700 hover:text-purple-600">Our Story / History</a>
+                <a href="/about/our-team" class="block text-gray-700 hover:text-purple-600">Our Team</a>
+                <a href="/about/achievements" class="block text-gray-700 hover:text-purple-600">Achievements</a>
+                <a href="/about/partners" class="block text-gray-700 hover:text-purple-600">Partners</a>
+                <a href="/about/testimonials" class="block text-gray-700 hover:text-purple-600">Testimonials</a>
+            </div>
+        </div>
+
+        <div>
+            <button class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle" aria-expanded="false" aria-controls="mobileAcademySubmenu">
+                <span>Academy</span>
+                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="mobileAcademySubmenu" class="pl-4 mt-2 space-y-1 hidden">
+                <a href="/academy/vex-iq" class="block text-gray-700 hover:text-purple-600">VEX IQ</a>
+                <a href="/academy/vex-v5" class="block text-gray-700 hover:text-purple-600">VEX V5</a>
+                <a href="/academy/workshops-camps" class="block text-gray-700 hover:text-purple-600">Workshops & Camps</a>
+                <a href="/academy/sponsorship-program" class="block text-gray-700 hover:text-purple-600">Sponsorship Program</a>
+            </div>
+        </div>
+
+        <div>
+            <button class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle" aria-expanded="false" aria-controls="mobileCompetitionSubmenu">
+                <span>Competition</span>
+                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="mobileCompetitionSubmenu" class="pl-4 mt-2 space-y-1 hidden">
+                <a href="/competition/viqrc" class="block text-gray-700 hover:text-purple-600">VEX IQ Competitions</a>
+                <a href="/competition/v5rc" class="block text-gray-700 hover:text-purple-600">VEX V5 Competitions</a>
+            </div>
+        </div>
+
+        <a href="/news" class="block text-gray-700 hover:text-purple-600">News</a>
+        <a href="/talents" class="block text-gray-700 hover:text-purple-600">Talents</a>
+        <a href="https://draconisrobotics.myshopify.com" class="block text-gray-700 hover:text-purple-600">Shop</a>
+
+        <div>
+            <button class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle" aria-expanded="false" aria-controls="mobileWorkSubmenu">
+                <span>Work With Us</span>
+                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="mobileWorkSubmenu" class="pl-4 mt-2 space-y-1 hidden">
+                <a href="/work-with-us/auditions" class="block text-gray-700 hover:text-purple-600">Auditions</a>
+                <a href="/work-with-us/join-the-team" class="block text-gray-700 hover:text-purple-600">Join the Team</a>
+                <a href="/work-with-us/outreach-program" class="block text-gray-700 hover:text-purple-600">Outreach Program</a>
+            </div>
+        </div>
+
+        <div>
+            <button class="w-full flex justify-between items-center text-gray-700 hover:text-purple-600 font-medium submenu-toggle" aria-expanded="false" aria-controls="mobileFAQSubmenu">
+                <span>FAQ</span>
+                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="mobileFAQSubmenu" class="pl-4 mt-2 space-y-1 hidden">
+                <a href="/faq/draconis-robotics" class="block text-gray-700 hover:text-purple-600">Draconis Robotics FAQ</a>
+                <a href="/faq/draconis-talents" class="block text-gray-700 hover:text-purple-600">Draconis Talents FAQ</a>
+            </div>
+        </div>
+
+        <a href="/contact-us" class="block text-gray-700 hover:text-purple-600">Contact Us</a>
+    </div>
+
+    <script>
+        // Toggle mobile menu open/close
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuButton.addEventListener("click", () => {
+            const expanded = menuButton.getAttribute("aria-expanded") === "true";
+            menuButton.setAttribute("aria-expanded", !expanded);
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Toggle submenus on mobile
+        const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+        submenuToggles.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const expanded = btn.getAttribute("aria-expanded") === "true";
+                btn.setAttribute("aria-expanded", !expanded);
+                const submenuId = btn.getAttribute("aria-controls");
+                const submenu = document.getElementById(submenuId);
+                submenu.classList.toggle("hidden");
+            });
+        });
+    </script>
+</body>
+
+
+
+
+<body class="bg-gray-50">
+    <main class="px-6 py-12">
+        <h1 class="text-5xl font-extrabold text-white bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 px-8 py-5 rounded-xl max-w-4xl mx-auto text-center mb-16 tracking-tight">
+            Draconis Talents Legal and Derivative Works Policy
+        </h1>
+
+        <section id="permission" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">1. Permission to Use Draconis Talents IP</h2>
+            <p class="font-semibold text-purple-700 mb-4">
+                TL;DR: Making free stuff for the community in a respectful, positive way? Awesome, go ahead. Making stuff for profit or in a way that's insulting, mean, or damaging? That’s not going to be allowed.
+            </p>
+            <p class="mb-6 text-lg leading-relaxed text-gray-900">
+                You are granted a personal, non-exclusive, non-transferable, revocable, limited license to use, display, and create derivative works based on Draconis Talents’ intellectual property <strong>strictly for non-commercial community use</strong>, provided you follow all rules herein.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-900">
+                We reserve the right to revoke this license at any time, for any reason or no reason, especially if we determine your use conflicts with our values or guidelines. Upon revocation, you must immediately stop all development, publication, or distribution of your project.
+            </p>
+        </section>
+
+        <section id="commercial" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">2. Commercial Use Restrictions</h2>
+            <p class="font-semibold text-purple-700 mb-4">
+                TL;DR: Don’t put your project behind a paywall, charge people, or try to generate revenue from it unless you have a prior written license agreement or the revenue is passively earned by promoting the project in videos, streams, or other content.
+            </p>
+            <ul class="list-disc list-inside space-y-3 text-lg leading-relaxed text-gray-900">
+                <li>No commercial or mass-produced projects (e.g., large-run merchandise, commercial products, or paywalled content) are allowed without prior written license agreement.</li>
+                <li>Small-scale fan sales (e.g., artwork, crafts at conventions) are permitted as hobby-level activity, but large volume or high-priced sales may be restricted.</li>
+                <li>Crowdfunding, paywalled platforms (Patreon, Fansly, YouTube Premium, etc.), or business-related uses require explicit permission.</li>
+                <li>Passive revenue generation via ads on streams or videos promoting your project is allowed, provided ads are appropriate and do not use untransformed official assets (e.g., monetizing simple clip compilations is prohibited).</li>
+                <li>Use of official assets without transformation or originality is not eligible for monetization.</li>
+            </ul>
+        </section>
+
+        <section id="originality" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">3. Originality Requirements</h2>
+            <p class="font-semibold text-purple-700 mb-4">
+                TL;DR: Simply streaming your face on top of existing content isn’t enough. You must add original, creative elements to anything using Draconis Talents IP.
+            </p>
+            <ul class="list-disc list-inside space-y-3 text-lg leading-relaxed text-gray-900">
+                <li>Be original—fans want to see your unique contributions.</li>
+                <li>Copying or lightly modifying existing content and passing it off as your own is not acceptable.</li>
+                <li>Light commentary (like subtitles or minimal reactions) won’t suffice.</li>
+                <li>You must add genuine creativity to your work.</li>
+                <li>We use content ID and other services to detect unoriginal or cannibalizing content.</li>
+            </ul>
+        </section>
+
+        <section id="logos" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">4. Use of Logos, Trademarks, and Official Assets</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg leading-relaxed text-gray-900">
+                <li>You may <strong>not</strong> use Draconis Talents’ logos, trademarks, character names, or official branding in any project, website, advertising, domain names, or social media accounts without explicit written permission.</li>
+                <li>Use of official music, videos, images, or other assets as-is (without creative modification) is prohibited and considered counterfeit.</li>
+                <li>This helps avoid confusion between fan projects and official Draconis Talents content.</li>
+            </ul>
+        </section>
+
+        <section id="nsfw" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">5. NSFW Content</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg leading-relaxed text-gray-900">
+                <li>NSFW content using Draconis Talents IP is permitted only if non-commercial and contains original creative elements.</li>
+                <li>NSFW works must be clearly marked and restricted to appropriate audiences.</li>
+                <li>Always adhere to platform-specific guidelines for NSFW content.</li>
+            </ul>
+        </section>
+
+        <section id="sharing" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">6. Sharing and Attribution</h2>
+            <p class="font-semibold text-purple-700 mb-4">
+                TL;DR: Yes! Just make sure people know it’s a fan project, not an official Draconis Talents product.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-900">
+                When sharing, you <strong>must</strong> include a clear disclaimer such as:<br />
+                <em>"[Project Title] was created under Draconis Talents’ Legal and Derivative Works Policy using Draconis Talents assets. Draconis Talents does not endorse or sponsor this project."</em>
+            </p>
+        </section>
+
+        <section id="official-use" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">7. Official Use of Fan Projects</h2>
+            <p class="text-lg leading-relaxed text-gray-900">
+                Draconis Talents may feature or build upon fan-created projects. We will contact you for permission if we want to use your work officially.
+            </p>
+        </section>
+
+        <section id="derivative-guidelines" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">8. Derivative Works Guidelines</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg leading-relaxed text-gray-900">
+                <li>Applies to all original Draconis Talents content: characters, models, art, and related IP.</li>
+                <li>Derivative works must include new, creative contributions; mere reproduction is prohibited.</li>
+                <li>Member-only or private content cannot be used without explicit permission.</li>
+                <li>Applies to individuals and non-legal entities worldwide; corporations or businesses must contact us before proceeding.</li>
+            </ul>
+        </section>
+
+        <section id="conduct" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">9. Conduct and Content Restrictions</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg leading-relaxed text-gray-900">
+                <li>Respect Draconis Talents VTubers; do not create content that offends, misrepresents, or impersonates them.</li>
+                <li>Keep activities at a fan or hobby level; avoid commercial use without license.</li>
+                <li>Do not alter official assets in unauthorized ways.</li>
+                <li>Comply with all applicable laws and platform terms.</li>
+            </ul>
+        </section>
+
+        <section id="sales" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">10. Sales and Commercialization</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg leading-relaxed text-gray-900">
+                <li>Hobby-level sales (artwork, crafts) are permitted within reasonable scale.</li>
+                <li>High-volume or high-priced sales deemed business activity may be suspended.</li>
+                <li>Contracted artists must have separate agreements to sell official art.</li>
+                <li>Sale of 3D merchandise (figures, plushies) is restricted to authorized events; contact organizers for permissions.</li>
+            </ul>
+        </section>
+
+        <section id="prohibited" class="mb-12">
+            <h2 class="text-3xl font-bold text-black mb-4">11. Prohibited Content</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg leading-relaxed text-gray-900">
+                <li>Do not create derivative works that could be mistaken as official Draconis Talents content.</li>
+                <li>Do not create socially unacceptable content or content damaging to Draconis Talents or its talents.</li>
+                <li>Do not include political, ideological, religious, or similar themes.</li>
+                <li>Do not violate third-party rights or harm others.</li>
+                <li>Do not create content deemed inappropriate or unsuitable by Draconis Talents.</li>
+            </ul>
+        </section>
+
+        <section id="updates" class="mb-16">
+            <h2 class="text-3xl font-bold text-black mb-4">12. Policy Updates</h2>
+            <p class="text-lg leading-relaxed text-gray-900">
+                These guidelines may change without notice. Please ensure you review and comply with the latest version.
+            </p>
+        </section>
+
+
+        <footer class="text-center text-gray-600 text-sm border-t border-gray-300 pt-6">
+            Last Updated: <time datetime="2025-07-26" class="font-medium">July 26, 2025</time>
+        </footer>
+</main>
+</body>
+
+
+<footer class="bg-gray-900 text-gray-400">
+      <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+          <!-- About -->
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">About Draconis</h3>
+            <p class="text-gray-400 text-sm">
+              Draconis Robotics empowers students through STEM education, robotics competitions, and digital talents.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/" class="hover:text-purple-400">Home</a></li>
+              <li><a href="/about/overview" class="hover:text-purple-400">About Us</a></li>
+              <li><a href="/about/achievements" class="hover:text-purple-400">Achievements</a></li>
+              <li><a href="/news" class="hover:text-purple-400">News</a></li>
+              <li><a href="/talents" class="hover:text-purple-400">Talents</a></li>
+              <li><a href="draconisrobotics.myshopify.com" class="hover:text-purple-400">Shop</a></li>
+              <li><a href="/work-with-us" class="hover:text-purple-400">Work With Us</a></li>
+              <li><a href="/faq" class="hover:text-purple-400">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
+            <address class="not-italic text-sm space-y-2">
+              <p>Location: <br />NIL</p>
+              <p>Email: <a href="mailto:contact@draconisrobotics.com" class="hover:text-purple-400">contact@draconisrobotics.com</a></p>
+              <p>Phone: <a href="tel:NIL" class="hover:text-purple-400">NIL</a></p>
+            </address>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-5">
+              <a href="https://www.twitch.tv/draconisrobotics" aria-label="Twitch" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitch fa-lg"></i>
+              </a>
+              <a href="https://x.com/DRGN_Robo" aria-label="Twitter / X" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter fa-lg"></i>
+              </a>
+              <a href="https://www.instagram.com/draconis_robotics/" aria-label="Instagram" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/draconis-robotics" aria-label="LinkedIn" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in fa-lg"></i>
+              </a>
+              <a href="https://www.youtube.com/@DraconisRobotics" aria-label="YouTube" class="hover:text-purple-400" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-12 border-t border-gray-700 pt-6 text-xs text-gray-500 flex justify-center items-center">
+          &copy; 2025 Draconis Robotics. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
